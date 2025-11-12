@@ -1,1 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Kimber Wonderland</title><link>https://kimberzheng.github.io/tags/</link><description>Recent content in Tags on Kimber Wonderland</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Tue, 25 Feb 2025 02:25:00 +0900</lastBuildDate><atom:link href="https://kimberzheng.github.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes</title><link>https://kimberzheng.github.io/tags/notes/</link><pubDate>Tue, 25 Feb 2025 02:25:00 +0900</pubDate><guid>https://kimberzheng.github.io/tags/notes/</guid><description/></item><item><title>Readme</title><link>https://kimberzheng.github.io/tags/readme/</link><pubDate>Tue, 25 Feb 2025 02:25:00 +0900</pubDate><guid>https://kimberzheng.github.io/tags/readme/</guid><description/></item><item><title>Korean-Markdown</title><link>https://kimberzheng.github.io/tags/korean-markdown/</link><pubDate>Tue, 25 Feb 2025 02:10:00 +0900</pubDate><guid>https://kimberzheng.github.io/tags/korean-markdown/</guid><description/></item><item><title>Lorem-Ipsum</title><link>https://kimberzheng.github.io/tags/lorem-ipsum/</link><pubDate>Tue, 25 Feb 2025 02:00:15 +0900</pubDate><guid>https://kimberzheng.github.io/tags/lorem-ipsum/</guid><description/></item><item><title>Markdown</title><link>https://kimberzheng.github.io/tags/markdown/</link><pubDate>Tue, 25 Feb 2025 01:58:26 +0900</pubDate><guid>https://kimberzheng.github.io/tags/markdown/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kimber&#39;s Wonderland</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Kimber&#39;s Wonderland</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 25 Feb 2025 02:25:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes</title>
+      <link>http://localhost:1313/tags/notes/</link>
+      <pubDate>Tue, 25 Feb 2025 02:25:00 +0900</pubDate>
+      <guid>http://localhost:1313/tags/notes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Readme</title>
+      <link>http://localhost:1313/tags/readme/</link>
+      <pubDate>Tue, 25 Feb 2025 02:25:00 +0900</pubDate>
+      <guid>http://localhost:1313/tags/readme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lorem-Ipsum</title>
+      <link>http://localhost:1313/tags/lorem-ipsum/</link>
+      <pubDate>Tue, 25 Feb 2025 02:00:15 +0900</pubDate>
+      <guid>http://localhost:1313/tags/lorem-ipsum/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:1313/tags/markdown/</link>
+      <pubDate>Tue, 25 Feb 2025 01:58:26 +0900</pubDate>
+      <guid>http://localhost:1313/tags/markdown/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -7,54 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no"/>
 
+    <script>
+    (function () {
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
+
     <title>约瑟夫森效应实验报告 | Kimber&#39;s Wonderland</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF3DB4">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#A33A29">
+    <meta name="theme-color" content="#F5EFE0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#201B14" media="(prefers-color-scheme: dark)">
 
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    </noscript>
+
     
     
     <link rel="stylesheet" href="/css/main.min.26c2a20057c82652bb9bb7adaedb9e81be240e3c4ff8eec06fd2421dc067282d.css"/>
 
     
     
-    
+    <link rel="stylesheet" href="/css/sepia.min.b3d0faa91c1c308b674e393658022614fb100b5388c10d424a68f245b8e21049.css"/>
 
-    
-    
- 
     </head>
 
     <body>
-        
-<nav>
+        <nav>
   <header>
     <div class="site-title">
         <a href="/">Kimber&#39;s Wonderland</a>
-    </div>  
+    </div>
+    <div class="dateline" id="dateline"></div>
+    <script>
+    (function () {
+        var el = document.getElementById('dateline');
+        if (!el) return;
+        var d = new Date();
+        el.textContent = d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日';
+    })();
+    </script>
+    <button class="theme-toggle" type="button" aria-label="切换深色 / 浅色模式" title="切换深色 / 浅色模式">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+    <script>
+    (function () {
+        var btn = document.querySelector('.theme-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+            var current = document.documentElement.getAttribute('data-theme');
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+    })();
+    </script>
 </header>
 
   <div class="nav-menu">
   
-    <a class="color-link nav-link" href="mailto:zrkimber@qq.com">Contact</a>
+    
+      <a class="color-link nav-link contact-copy" href="mailto:kimber_zheng@163.com" data-copy-email="kimber_zheng@163.com" title="点击复制邮箱">Contact</a>
+    
   
-    <a class="color-link nav-link" href="/tags/">Tags</a>
-  
-    <a class="color-link nav-link" href="/about/">About</a>
+    
+      <a class="color-link nav-link" href="/tags/">目录</a>
+    
   
   
   <a class="color-link nav-link" href="https://kimberzheng.github.io/index.xml" target="_blank" rel="noopener" type="application/rss+xml">RSS</a>
   
-</div>
-<footer class="footer">
+  </div>
+  <footer class="footer">
 	<div class="social-icons">
         
-    <a class="social-icon" href="mailto:zrkimber@qq.com" target="_blank" rel="noopener" title="Email">
+    <a class="social-icon" href="mailto:kimber_zheng@163.com" target="_blank" rel="noopener" title="Email">
         <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
             <path d="M25.2794292,5.59128519 L14,16.8707144 L2.72057081,5.59128519 C3.06733103,5.30237414 3.51336915,5.12857603 4,5.12857603 L24,5.12857603 C24.4866308,5.12857603 24.932669,5.30237414 25.2794292,5.59128519 Z M25.9956978,6.99633695 C25.998551,7.04004843 26,7.08414302 26,7.12857603 L26,20.871424 C26,21.0798433 25.9681197,21.2808166 25.9089697,21.4697335 L18.7156355,14.2763993 L25.9956978,6.99633695 Z M24.9498374,22.6319215 C24.6672737,22.7846939 24.3437653,22.871424 24,22.871424 L4,22.871424 C3.5268522,22.871424 3.09207889,22.7071233 2.74962118,22.432463 L10.0950247,15.0870594 L13.9848068,18.9768415 L14.1878486,18.7737996 L14.2030419,18.7889929 L17.6549753,15.3370594 L24.9498374,22.6319215 Z M2.00810114,21.0526627 C2.00273908,20.9929669 2,20.9325153 2,20.871424 L2,7.12857603 C2,7.08414302 2.00144896,7.04004843 2.00430222,6.99633695 L9.03436454,14.0263993 L2.00810114,21.0526627 Z"></path>
         </svg>
@@ -135,6 +175,57 @@
 </footer>
 
 </nav>
+<script>
+(function () {
+    function fallbackCopy(text) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+    }
+
+    document.addEventListener('click', function (e) {
+        var target = e.target;
+        var link = target && target.closest ? target.closest('.contact-copy') : null;
+        if (!link) return;
+        e.preventDefault();
+
+        var email = link.getAttribute('data-copy-email') || '';
+
+        var showToast = function () {
+            var toast = document.createElement('div');
+            toast.className = 'toast-copy';
+            toast.textContent = '已复制邮箱' + email;
+            document.body.appendChild(toast);
+            void toast.offsetWidth;
+            toast.classList.add('show');
+            setTimeout(function () {
+                toast.classList.remove('show');
+                setTimeout(function () { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 250);
+            }, 1800);
+        };
+
+        var copy = function (text) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(showToast, function () {
+                    fallbackCopy(text);
+                    showToast();
+                });
+            } else {
+                fallbackCopy(text);
+                showToast();
+            }
+        };
+
+        copy(email);
+    });
+})();
+</script>
 
         <div id="content" class="content-container">
         
@@ -167,7 +258,7 @@
         <footer class="footer-mobile">
 	<div class="social-icons">
         
-    <a class="social-icon" href="mailto:zrkimber@qq.com" target="_blank" rel="noopener" title="Email">
+    <a class="social-icon" href="mailto:kimber_zheng@163.com" target="_blank" rel="noopener" title="Email">
         <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
             <path d="M25.2794292,5.59128519 L14,16.8707144 L2.72057081,5.59128519 C3.06733103,5.30237414 3.51336915,5.12857603 4,5.12857603 L24,5.12857603 C24.4866308,5.12857603 24.932669,5.30237414 25.2794292,5.59128519 Z M25.9956978,6.99633695 C25.998551,7.04004843 26,7.08414302 26,7.12857603 L26,20.871424 C26,21.0798433 25.9681197,21.2808166 25.9089697,21.4697335 L18.7156355,14.2763993 L25.9956978,6.99633695 Z M24.9498374,22.6319215 C24.6672737,22.7846939 24.3437653,22.871424 24,22.871424 L4,22.871424 C3.5268522,22.871424 3.09207889,22.7071233 2.74962118,22.432463 L10.0950247,15.0870594 L13.9848068,18.9768415 L14.1878486,18.7737996 L14.2030419,18.7889929 L17.6549753,15.3370594 L24.9498374,22.6319215 Z M2.00810114,21.0526627 C2.00273908,20.9929669 2,20.9325153 2,20.871424 L2,7.12857603 C2,7.08414302 2.00144896,7.04004843 2.00430222,6.99633695 L9.03436454,14.0263993 L2.00810114,21.0526627 Z"></path>
         </svg>

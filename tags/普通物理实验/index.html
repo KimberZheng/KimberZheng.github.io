@@ -40,7 +40,7 @@
 
     
     
-    <link rel="stylesheet" href="/css/sepia.min.310adc2b17395b15418352c4753e0b25f2be84cd3937235f07f42a0110325b65.css"/>
+    <link rel="stylesheet" href="/css/sepia.min.51e6aae0331ba4c020fbc003bcf6b1021ae7eee5d94984400e47014633e184d4.css"/>
 
     
     <link rel="alternate" type="application/rss+xml" href="https://kimberzheng.github.io/tags/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C/index.xml" title="Kimber's Wonderland" />
@@ -81,13 +81,7 @@
 
   <div class="nav-menu">
   
-    
-      <a class="color-link nav-link contact-copy" href="mailto:kimber_zheng@163.com" data-copy-email="kimber_zheng@163.com" title="点击复制邮箱">Contact</a>
-    
-  
-    
-      <a class="color-link nav-link" href="/tags/">目录</a>
-    
+    <a class="color-link nav-link" href="/tags/">目录</a>
   
   </div>
   <footer class="footer">
@@ -166,10 +160,6 @@
 
 
 
-
-    <p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
-    <p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
-
 	<script src="https://kimberzheng.github.io/js/main.min.a7205ef73b078c8daed6fe1b0826e8ba229ffabbb69d299d9446cf41f2c7d8aa.js" integrity="sha256-pyBe9zsHjI2u1v4bCCbouiKf+ru2nSmdlEbPQfLH2Ko=" crossorigin="anonymous"></script>
 </footer>
 
@@ -190,16 +180,16 @@
 
     document.addEventListener('click', function (e) {
         var target = e.target;
-        var link = target && target.closest ? target.closest('.contact-copy') : null;
+        var link = target && target.closest ? target.closest('a[href^="mailto:"]') : null;
         if (!link) return;
         e.preventDefault();
 
-        var email = link.getAttribute('data-copy-email') || '';
+        var email = link.getAttribute('href').replace(/^mailto:/i, '').trim();
 
         var showToast = function () {
             var toast = document.createElement('div');
             toast.className = 'toast-copy';
-            toast.textContent = '已复制邮箱' + email;
+            toast.textContent = '已复制作者邮箱：' + email;
             document.body.appendChild(toast);
             void toast.offsetWidth;
             toast.classList.add('show');
@@ -330,13 +320,6 @@
 </div>
 
 
-
-
-	<div class="footer-mobile-links">
-        <p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
-		<span class="divider-bar">|</span>
-        <p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
-	</div>
 
 	<script src="https://kimberzheng.github.io/js/main.min.a7205ef73b078c8daed6fe1b0826e8ba229ffabbb69d299d9446cf41f2c7d8aa.js" integrity="sha256-pyBe9zsHjI2u1v4bCCbouiKf+ru2nSmdlEbPQfLH2Ko=" crossorigin="anonymous"></script>
 </footer>
